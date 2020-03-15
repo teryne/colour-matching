@@ -55,7 +55,7 @@ inputField.addEventListener("keypress", event => {
       xhttp.onreadystatechange = alertResponse;
       xhttp.open(
         "GET",
-        `http://localhost:3000/api/colours?colour=${inputField.value.split('#')[1]}`,
+        `http://colour-matching.herokuapp.com:3000/api/colours?colour=${inputField.value.split('#')[1]}`,
         true
       );
       xhttp.send();
