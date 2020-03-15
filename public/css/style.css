@@ -1,0 +1,26 @@
+body {
+  background: linear-gradient(-90deg,  #131212, #131212) no-repeat;
+  color: white;
+  background-size: 100vw 300vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+table {
+  width: 90vw;
+  text-align: center;
+  margin: 1rem auto;
+  text-transform: uppercase;
+}
+
+th {
+  text-transform: uppercase;
+}
+
+td {
+  padding: 0.5rem;
+}
+
+.header-div {
+  text-align: center;
+  margin-bottom: 1rem;
+}
