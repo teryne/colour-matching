@@ -1,4 +1,5 @@
 // Imports.
+require('dotenv').config()
 const express = require('express');
 const fileAdapter = require('lowdb/adapters/FileSync');
 const helpers = require('./helpers');
@@ -7,7 +8,6 @@ const _ = require('lodash');
 
 // Globals.
 const DATABASE = 'coloursDatabase.json';
-const PORT = 3000;
 
 // Express.
 const app = express();
@@ -68,4 +68,4 @@ app.get('/api/colours', (request, response) => {
   return;
 });
 
-app.listen(PORT, () => console.log(`Server is listening on port ${PORT}`));
+app.listen(process.env.PORT || 3000, () => console.log(`Server is listening on port ${process.env.PORT}`));
