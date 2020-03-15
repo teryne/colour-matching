@@ -5,6 +5,10 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+span {
+  font-size: 70%;
+}
+
 table {
   width: 90vw;
   text-align: center;
@@ -37,5 +41,6 @@ td:first-child {
 
   td:first-child {
     width: 10px;
+    height: 10px;
   }
 }

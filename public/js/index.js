@@ -49,6 +49,7 @@ function changeBodyColour(colour){
 let inputField = document.getElementById("colour-input");
 inputField.addEventListener("keypress", event => {
   if (event.keyCode === 13 && inputField.value !== "") {
+    let warningText = document.getElementById('warning-text');
     if (isValidHexCode(inputField.value)) {
       var xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = alertResponse;
@@ -69,10 +70,9 @@ inputField.addEventListener("keypress", event => {
           }
         }
       }
+      warningText.innerHTML = '';
     } else {
-      let warningText = document.getElementById('warning-text');
       warningText.innerHTML = '* Please enter a valid hex code.'
-      warningText.style.color = 'red';
     }
   }
 });
