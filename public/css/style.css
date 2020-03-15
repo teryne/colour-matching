@@ -20,7 +20,22 @@ td {
   padding: 0.5rem;
 }
 
+td:first-child {  
+  width: 30px;
+  
+}
+
 .header-div {
   text-align: center;
   margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+  table {
+    font-size: 70%;
+  }
+
+  td:first-child {
+    width: 10px;
+  }
 }

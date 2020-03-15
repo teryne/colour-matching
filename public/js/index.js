@@ -34,7 +34,6 @@ function createResultsTable(json){
       let cell = tr.insertCell(-1);
       if(j === 0){
         cell.style.backgroundColor = json[i].hex;
-        cell.style.width = '30px';
       } else {
         cell.innerHTML = json[i][columns[j]];
       }
