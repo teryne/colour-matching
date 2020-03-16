@@ -34,7 +34,7 @@ app.get('/api/colours', (request, response) => {
   }
 
   const hexColourString = request.query.colour;
-  const colourSearchRange = parseInt(request.query.range) || 16;
+  const colourSearchRange = parseInt(request.query.range) || 64;
 
   const rgbArray = helpers.convertHexToRGB(hexColourString);
   const dominantChannel = helpers.findDominantChannel(rgbArray);
