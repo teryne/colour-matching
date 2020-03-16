@@ -55,10 +55,10 @@ app.get('/api/colours', (request, response) => {
           return colourObject;
       })
       .value()
-      .sort(({ rgb: colourA }, { rgb: colourB }) => {
-        const channelR = Math.abs(rgbArray[0] - colourA[0]) - Math.abs(rgbArray[0] - colourB[0]);
-        const channelG = Math.abs(rgbArray[1] - colourA[1]) - Math.abs(rgbArray[1] - colourB[1]);
-        const channelB = Math.abs(rgbArray[2] - colourA[2]) - Math.abs(rgbArray[2] - colourB[2]);
+      .sort((colourObjectA, colourObjectB) => {
+        const channelR = Math.abs(rgbArray[0] - colourObjectA.rgb[0]) - Math.abs(rgbArray[0] - colourObjectB.rgb[0]);
+        const channelG = Math.abs(rgbArray[1] - colourObjectA.rgb[1]) - Math.abs(rgbArray[1] - colourObjectB.rgb[1]);
+        const channelB = Math.abs(rgbArray[2] - colourObjectA.rgb[2]) - Math.abs(rgbArray[2] - colourObjectB.rgb[2]);
 
         return channelR + channelG + channelB;
       })
